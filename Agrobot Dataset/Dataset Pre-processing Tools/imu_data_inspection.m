@@ -1,0 +1,11 @@
+z1 = readtable('log 4/raw_imu_gps_2022-05-04-01-14-20.csv' );
+z2 = readtable('log 4/mag_imu_gps_2022-05-04-01-14-20.csv');
+z3 = readtable('log 4/data_imu_gps_2022-05-04-01-14-20.csv');
+z1.x_time = (z1.x_time - min(z1.x_time))/1e9;
+z2.x_time = (z2.x_time - min(z2.x_time))/1e9;
+z3.x_time = (z3.x_time - min(z3.x_time))/1e9;
+% plot(z3.x_time, z1.field_angular_velocity_x);
+% plot(z3.x_time, z1.field_linear_acceleration_x);
+% plot(z2.x_time, z2.field_magnetic_field_x);
+rotation = 57.2958.*quat2eul([z3.field_orientation_w, z3.field_orientation_x, z3.field_orientation_y, z3.field_orientation_z],"XYZ");
+plot(z3.x_time,rotation(:,3));

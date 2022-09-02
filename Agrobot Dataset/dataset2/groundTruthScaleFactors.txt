@@ -1,0 +1,6 @@
+log1_aligned.csv, 154
+log2_aligned.csv, 150
+log3_aligned.csv, 192
+log5_aligned.csv, 173
+log6_aligned.csv, 165
+log7_aligned.csv, 160
