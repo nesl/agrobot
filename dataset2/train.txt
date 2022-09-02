@@ -1,5 +1,0 @@
-log1_aligned.csv
-log2_aligned.csv
-log3_aligned.csv
-log7_aligned.csv
-log6_aligned.csv

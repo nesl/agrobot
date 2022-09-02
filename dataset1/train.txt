@@ -1,4 +1,0 @@
-Log1 Aligned.csv
-Log3 Aligned.csv
-Log4 Aligned.csv
-Log5 Aligned.csv
