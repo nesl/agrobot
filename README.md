@@ -1,5 +1,7 @@
 # Neural-Kalman GNSS/INS Navigation for Precision Agriculture
 
+![overall](overall.png)
+
 ## Summary
 Precision agricultural robots require high-resolution navigation solutions. In this paper, we introduce a robust neural-inertial sequence learning approach to track such robots with ultra-intermittent GNSS updates. First, we propose an ultra-lightweight neural-Kalman filter that can track agricultural robots within 1.4 m (1.4 - 5.8x better than competing techniques), while tracking within 2.75 m with 20 mins of GPS outage. Second, we introduce a user-friendly video-processing pipeline to generate high-resolution (+- 5 cm) position data for fine-tuning pre-trained neural-inertial models in the field. Third, we introduce the first and largest (6.5 hours, 4.5 km, 3 phases) public neural-inertial navigation dataset for precision agricultural robots. The dataset and code are available at: https://github.com/nesl/agrobot.
 
