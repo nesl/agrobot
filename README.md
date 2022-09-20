@@ -10,6 +10,11 @@ Precision agricultural robots require high-resolution navigation solutions. In t
 ## Code Architecture
 
 
+- ```Agrobot Dataset```: Contains the 3-phase neural-inertial navigation dataset for precision agriculture. Visit the folder for more information
+- ```Baselines```: Has 4 neural-inertial baselines (in Python) and 2 classical INS/GNSS baselines (in MATLAB)
+- ```Neural Kalman IMU GNSS Fusion```: Contains our neural-Kalman filter algorithm for GNSS/INS fusion. Contains pretrained models for all three phases, jupyter notebooks for training these models (```sample_training_dsetX.ipynb```), notebooks to run the neural-Kalman filter (```neural_kalman.ipynb```), notebooks to perform transfer learning on pre-trained model (```fine_tuning.ipynb```), and notebooks to perform ablation study (```ablation_study.ipynb```).
+
+
 ## Required items 
 - A GPU Workstation running Ubuntu 20.04.
 - Python 3.8+ must be installed, preferably through Anaconda or Virtualenv, https://docs.conda.io/en/latest/, https://virtualenv.pypa.io/en/latest/
