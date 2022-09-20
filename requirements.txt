@@ -1,0 +1,16 @@
+numpy                    1.19.5             
+numpy-quaternion         2020.11.2.17.0.49 
+scikit-learn             0.24.2             
+scipy                    1.7.0 
+tensorflow               2.5.0   
+tensorflow-gpu           2.5.0
+jupyterlab               3.0.16 
+tqdm                     4.61.2 
+matplotlib               3.5.0 
+keras                    2.7.0 
+keras-tcn                3.3.0
+pandas                   1.3.1 
+geographiclib            1.52               
+giotto-tda               0.5.1 
+keras-flops              0.1.2  
+pyproj                   3.3.1 

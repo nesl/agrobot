@@ -7,11 +7,11 @@ from tqdm import tqdm
 import tensorflow as tf
 
 
-ACCELEROMETER_NOISE_VARIANCE = 0.00615490459 #(m/s^2)^2, 0.0011858
-GYROSCOPE_NOISE_VARIANCE = 0.0000030462 #(rad/s)^2 0.0000030462
-MAGNETOMETER_NOISE_VARIANCE = 0.36 #ut^2 0.09 
-GYROSCOPE_ARW = [3.09, 2.7, 5.4] #deg/sqrt(hr) [11.28, 12.85,13.45]
-GYROSCOPE_BI = [88.91,78.07,211.4] #deg/hr [45.9, 54.68, 52.38]
+ACCELEROMETER_NOISE_VARIANCE = 0.00615490459 # 0.00615490459 #(m/s^2)^2, 0.0011858
+GYROSCOPE_NOISE_VARIANCE = 0.0000030462#0.0000030462 #(rad/s)^2 0.0000030462
+MAGNETOMETER_NOISE_VARIANCE = 0.36 #0.36 #ut^2 0.09 
+GYROSCOPE_ARW = [3.09, 2.7, 5.4] #[3.09, 2.7, 5.4] #deg/sqrt(hr) [11.28, 12.85,13.45]
+GYROSCOPE_BI = [88.91,78.07,211.4] #[88.91,78.07,211.4] #deg/hr [45.9, 54.68, 52.38]
 
 GPS_VELOCITY_NOISE_VARIANCE = 0.0025
 GPS_POSITION_NOISE_VARIANCE = 1.5**2
@@ -22,7 +22,7 @@ def kalman_predict(X, P, Q, A, B, G,T):
     return X,P
 
 def kalman_update(X,P,z,R,H):
-    K = (P@np.transpose(H))@np.linalg.pinv(H@P@np.transpose(H) + R)
+    K = (P@np.transpose(H))@np.linalg.inv(H@P@np.transpose(H) + R)
     X = X + K@(z-H@X)
     P = P-K@H@P
     return X, P
