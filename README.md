@@ -1,6 +1,6 @@
 # Neural-Kalman GNSS/INS Navigation for Precision Agriculture
 
-![abstract](graphical_abstract.png)
+![abstract](abstract.png)
 ![overall](overall.png)
 
 ## Video Demo
